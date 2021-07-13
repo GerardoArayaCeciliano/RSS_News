@@ -1,4 +1,4 @@
-import MyConfiguration from "../singletonDb";
+import singletonDB from "../singletonDb";
 const itemsReceived: string[] = [];
 export function newItemHandler(item: any): any {
   console.log('Entro',item);
@@ -12,8 +12,8 @@ export function newItemHandler(item: any): any {
   }
 }
 async function saveItemInDatabase(item: any) {
-  let dbConnection = MyConfiguration.getInstance();
-  const sql = `Insert into tbl_noticias(title,description,officialURL) values('${item.title}','${item.description}','${item.link}')`;
+  let dbConnection = singletonDB.getInstance();
+  const sql = `Insert into stock_noticias(title,description,officialURL) values('${item.title}','${item.description}','${item.link}')`;
   (await dbConnection.connectDB).query(sql).catch((error: any) => {
     console.log('Error');
   })
