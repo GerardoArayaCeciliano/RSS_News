@@ -1,7 +1,8 @@
-import singletonDB from "../singletonDb";
+import console from "console";
+import singletonDB from "../singletonDB";
 const itemsReceived: string[] = [];
 export function newItemHandler(item: any): any {
-  console.log('Entro',item);
+  //  console.log('Entro',item);
 
   if (newsExist(item)) {
     console.log('Existe');
@@ -13,6 +14,9 @@ export function newItemHandler(item: any): any {
 }
 async function saveItemInDatabase(item: any) {
   let dbConnection = singletonDB.getInstance();
+ // console.log(item.date);
+  const d=new Date(item.date);
+ 
   const sql = `Insert into stock_noticias(title,description,officialURL) values('${item.title}','${item.description}','${item.link}')`;
   (await dbConnection.connectDB).query(sql).catch((error: any) => {
     console.log('Error');
@@ -38,3 +42,5 @@ function saveItemsInItemsReceived(item: any) {
     itemsReceived.splice(0, 1);
   }
 }
+
+
