@@ -37,11 +37,10 @@ const rssList = __importStar(require("./rss-list.json"));
 (function main() {
     return __awaiter(this, void 0, void 0, function* () {
         const feeder = new rss_feed_emitter_1.default({ skipFirstLoad: true });
-        const rssListConfiguration = rssList.x;
+        const rssListConfiguration = rssList.configuration;
         rssListConfiguration.forEach((rssItemConfiguration) => {
             feeder.add(rssItemConfiguration);
         });
-        // feeder.on('new-item')=>newItemHandler(item)
         feeder.on('new-item', news_handler_1.newItemHandler);
         feeder.on('error', console.error);
     });

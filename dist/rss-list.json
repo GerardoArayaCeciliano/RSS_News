@@ -1,9 +1,7 @@
-{ "x": [{
-            "url": "https://www.insightssuccess.com/feed/",
-            "refresh": 1000
-        },
+{
+    "configuration": [
         {
-            "url": "https://www.businessdailyafrica.com/latestrss.rss",
+            "url": "https://www.insightssuccess.com/feed/",
             "refresh": 1000
         },
         {
@@ -21,77 +19,102 @@
         {
             "url": "https://finance.yahoo.com/news/rssindex",
             "refresh": 1000
-        }, {
+        },
+        {
             "url": "https://seekingalpha.com/market_currents.xml",
             "refresh": 1000
-        }, {
+        },
+        {
             "url": "https://www.financialexpress.com/feed/",
             "refresh": 1000
-        }, {
+        },
+        {
             "url": "https://www.investing.com/rss/news.rss",
             "refresh": 1000
-        }, {
+        },
+        {
             "url": "https://feeds.feedburner.com/morningstar/glkd",
             "refresh": 1000
-        }, {
+        },
+        {
             "url": "https://fortune.com/feed",
             "refresh": 1000
-        }, {
+        },
+        {
             "url": "https://www.ft.com/?format=rss",
             "refresh": 1000
-        }, {
+        },
+        {
             "url": "https://www.cnbc.com/id/19746125/device/rss/rss.xml",
             "refresh": 1000
-        }, {
+        },
+        {
             "url": "http://rss.cnn.com/rss/money_news_companies.rss",
             "refresh": 1000
-        }, {
+        },
+        {
             "url": "http://rss.cnn.com/rss/money_markets.rss",
             "refresh": 1000
-        }, {
+        },
+        {
             "url": "http://rss.cnn.com/rss/money_smbusiness.rss",
             "refresh": 1000
-        }, {
+        },
+        {
             "url": "http://rss.cnn.com/rss/money_news_economy.rss",
             "refresh": 1000
-        }, {
+        },
+        {
             "url": "https://www.prnewswire.com/rss/news-releases-list.rss",
             "refresh": 1000
-        }, {
+        },
+        {
             "url": "http://feed.businesswire.com/rss/home/?rss=G1QFDERJXkJeEFtRXQ==",
             "refresh": 1000
-        }, {
-            "url": "https://www.prnewswire.com/rss/news-releases-list.rss",
-            "refresh": 1000
-        }, {
+        },
+        {
             "url": "https://www.otcmarkets.com/syndicate/rss.xml",
             "refresh": 1000
-        }, {
-            "url": "https://www.prnewswire.com/rss/news-releases-list.rss",
-            "refresh": 1000
-        }, {
-            "url": "https://www.prnewswire.com/rss/news-releases-list.rss",
-            "refresh": 1000
-        }, {
-            "url": "https://www.prnewswire.com/rss/news-releases-list.rss",
-            "refresh": 1000
-        }, {
-            "url": "https://www.prnewswire.com/rss/news-releases-list.rss",
-            "refresh": 1000
-        }, {
-            "url": "https://www.prnewswire.com/rss/news-releases-list.rss",
-            "refresh": 1000
-        }, {
-            "url": "https://www.prnewswire.com/rss/news-releases-list.rss",
-            "refresh": 1000
-        }, {
-            "url": "https://www.prnewswire.com/rss/news-releases-list.rss",
-            "refresh": 1000
-        }, {
-            "url": "https://www.prnewswire.com/rss/news-releases-list.rss",
-            "refresh": 1000
-        }, {
+        },
+        {
             "url": "https://lorem-rss.herokuapp.com/feed?unit=second&interval=10",
             "refresh": 1000
+        },
+        {
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent",
+            "refresh": 1000
+        },
+        {
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&CIK=&type=&company=&dateb=&owner=&start=0&count=40&output=atom",
+            "refresh": 1000
+        },
+        {
+            "url": "https://www.sec.gov/news/pressreleases.rss",
+            "refresh": 1000
+        },
+        {
+            "url": "https://www.sec.gov/news/statements.rss",
+            "refresh": 1000
+        },
+        {
+            "url": "https://www.sec.gov/news/speeches.rss",
+            "refresh": 1000
+        },
+        {
+            "url": "https://www.sec.gov/news/testimony.rss",
+            "refresh": 1000
+        },
+        {
+            "url": "https://www.sec.gov/news/testimony.rss",
+            "refresh": 1000
+        },
+        {
+            "url": "https://www.sec.gov/rss/investor/alerts",
+            "refresh": 1000
+        },
+        {
+            "url": "https://sec.report/Form/S-1.rss",
+            "refresh": 1000
         }
-    ] }
+    ]
+}

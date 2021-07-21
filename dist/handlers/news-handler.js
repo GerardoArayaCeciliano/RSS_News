@@ -8,31 +8,33 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.newItemHandler = void 0;
-const db_config_1 = require("../configuration/db.config");
+const console_1 = __importDefault(require("console"));
+const singletonDB_1 = __importDefault(require("../singletonDB"));
 const itemsReceived = [];
 function newItemHandler(item) {
-    console.log('Entro', item);
-    //  if(newsExist(item)){
-    //    console.log('Existe');
-    //  }
-    //  else
-    //  {
-    //    saveItemsInItemsReceived(item);
-    //    saveItemInDatabase(item);
-    //  }
+    //  console.log('Entro',item);
+    if (newsExist(item)) {
+        console_1.default.log('Existe');
+    }
+    else {
+        saveItemsInItemsReceived(item);
+        saveItemInDatabase(item);
+    }
 }
 exports.newItemHandler = newItemHandler;
 function saveItemInDatabase(item) {
     return __awaiter(this, void 0, void 0, function* () {
-        const dbConnection = yield db_config_1.getDatabaseConnection();
-        fixNullItemInformation(item);
-        //const sql = `Insert into tbl_noticias(title,description,officialURL) values('${item.title}','${item.description}','${item.link}')`;
-        //const sql = `Insert into tbl_noticias(title,officialURL) values('${item.title}','${item.link}')`;
-        const sql = `Insert into tbl_noticias(description) values('${item.description}')`;
-        dbConnection.query(sql).catch((err) => {
-            process.exit(0);
+        let dbConnection = singletonDB_1.default.getInstance();
+        // console.log(item.date);
+        const d = new Date(item.date);
+        const sql = `Insert into stock_noticias(title,description,officialURL) values('${item.title}','${item.description}','${item.link}')`;
+        (yield dbConnection.connectDB).query(sql).catch((error) => {
+            console_1.default.log('Error');
         });
     });
 }
